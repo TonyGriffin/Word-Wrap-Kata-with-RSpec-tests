@@ -21,13 +21,13 @@ class Wrapper
         # Uses recursion to apply the same conditions to the remainder of the string
         string[0... white_space] + "\n" + wrap(string[white_space+1.. -1], length_boundry)
 
-        # W.S. AT BOUNDRY
+        # W.S. AT BOUNDRY ??
         # If a whitespace occurs at the length_boundry
         # Add a new line at that index and use recursion to wrap from the next index to the end of the string.
         elsif string[length_boundry] == " "
         string[0... length_boundry] + "\n" + wrap(string[length_boundry.. -1].strip, length_boundry)
 
-        #W.S AFTER BOUNDRY OR WORD SPLIT  
+        # W.S AFTER BOUNDRY OR WORD SPLIT ??
         # If a whitespace occurs after the length_boundry or if length_boundry splits a string
         # Add a new line after the length_boundry and use recursion to apply the same conditions to the remainder of the string
         else
